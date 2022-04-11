@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.3/tools/projmgr/schemas/cproject.schema.json
+
+project:
+
+  layers:
+    - layer: {Board}
+
+  groups:
+    - group: Documentation
+      files: 
+        - file: ../Abstract.txt
+
+    - group: App
+      files: 
+        - file: ./DualCore.c

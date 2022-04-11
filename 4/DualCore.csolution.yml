@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.3/tools/projmgr/schemas/csolution.schema.json
+
+solution:
+
+  packs:
+    - pack: ARM::CMSIS
+    - pack: Keil::STM32H7xx_DFP@3.0.0
+
+  target-types:
+    - type: CM4
+      board: STMicroelectronics::STM32H747I-EVAL
+      device: STMicroelectronics::STM32H747XIHx:CM4
+    - type: CM7
+      board: STMicroelectronics::STM32H747I-EVAL
+      device: STMicroelectronics::STM32H747XIHx:CM7
+
+  build-types:
+    - type: Debug
+      compiler: AC6
+      misc:
+        - C*:
+            - -O1
+            - -g
+        - ASM:
+          - -masm=auto
+    - type: Release
+      compiler: AC6
+      misc:
+        - C*:
+            - -O3
+        - ASM:
+          - -masm=auto
+
+  projects:
+    - project: ./CM4/CM4.cproject.yml
+      for-type: +CM4
+    - project: ./CM7/CM7.cproject.yml
+      for-type: +CM7

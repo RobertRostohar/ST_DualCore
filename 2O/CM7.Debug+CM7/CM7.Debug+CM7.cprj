@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<cprj schemaVersion="1.7.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PACK.xsd">
+  <created timestamp="2022-04-11T09:30:50" tool="csolution 0.9.3"/>
+
+  <info isLayer="false">
+    <description>Automatically generated project</description>
+  </info>
+
+  <packages>
+    <package name="CMSIS" vendor="ARM" version="5.8.0"/>
+    <package name="STM32H7xx_DFP" vendor="Keil" version="3.0.0"/>
+  </packages>
+
+  <compilers>
+    <compiler name="AC6" version="6.16.0"/>
+  </compilers>
+
+  <target Bname="STM32H747I-EVAL" Bvendor="STMicroelectronics" Bversion="Rev.ES" Dendian="Little-endian" Dfpu="DP_FPU" Dname="STM32H747XIHx" Dsecure="Non-secure" Dvendor="STMicroelectronics:13" Pname="CM7">
+    <output intdir="CM7.Debug+CM7_IntDir/" name="CM7.Debug+CM7" outdir="CM7.Debug+CM7_OutDir/" type="exe"/>
+    <asflags add="-masm=auto" compiler="AC6"/>
+    <cflags add="-O1 -g" compiler="AC6"/>
+    <cxxflags add="-O1 -g" compiler="AC6"/>
+    <ldflags compiler="AC6" file="./stm32h747_cm7.sct"/>
+    <includes>../Common;../Common/STM32H747I_EVAL_BSP</includes>
+  </target>
+
+  <components>
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.5.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube Framework" Csub="STM32CubeMX" Cvendor="Keil" Cversion="2.0.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="ADC" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Flash" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="HSEM" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="I2C" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART" Cvendor="Keil" Cversion="1.9.0"/>
+    <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.9.0">
+      <file attr="config" category="source" name="Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/arm/startup_stm32h747xx.s" version="1.9.0"/>
+      <file attr="config" category="source" name="Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_boot_cm4_cm7.c" version="1.9.0"/>
+    </component>
+  </components>
+
+  <files>
+    <group name="Documentation">
+      <file category="doc" name="../Abstract.txt"/>
+    </group>
+    <group name="App">
+      <file category="sourceC" name="./DualCore.c"/>
+      <file category="linkerScript" name="./stm32h747_cm7.sct"/>
+    </group>
+    <group name="BSP">
+      <file category="header" name="../Common/common.h"/>
+      <file category="header" name="../Common/STM32H747I_EVAL_BSP/stm32h747i_eval.h"/>
+      <file category="sourceC" name="../Common/STM32H747I_EVAL_BSP/stm32h747i_eval.c"/>
+    </group>
+  </files>
+</cprj>
+
