@@ -206,5 +206,6 @@ Composed project from Step 3 (currently manually constructed):
  - copy RTE directory (from layer .yml directory) to project directory
  - process .yml file and copy referenced file (retain directory tree)
 
+Note: STM32CubeMX integration retained (requires updated STM32H7 DFP)
 
 

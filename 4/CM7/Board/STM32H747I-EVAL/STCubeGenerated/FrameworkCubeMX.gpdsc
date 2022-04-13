@@ -27,11 +27,11 @@
         <argument>$SMDK/CubeMX/DC</argument>                      <!-- absolute or relative to ftl templates. $S = Device Family Pack base folder -->
       </exe>
       <project_files>
-        <file category="include" name="../../../../Board/STM32H747I-EVAL/STM32CubeMX/STCubeGenerated/CM7/Inc/"/>
-        <file category="source" name="../../../../Board/STM32H747I-EVAL/STM32CubeMX/STCubeGenerated/CM7/Src/main.c" />
-        <file category="header" name="../../../../Board/STM32H747I-EVAL/STM32CubeMX/STCubeGenerated/CM7/Inc/stm32h7xx_it.h"/>
-        <file category="source" name="../../../../Board/STM32H747I-EVAL/STM32CubeMX/STCubeGenerated/CM7/Src/stm32h7xx_it.c"/>
-        <file category="other" name="../../../../Board/STM32H747I-EVAL/STM32CubeMX/STCubeGenerated/STCubeGenerated.ioc"/>
+        <file category="include" name="../../../../Board/STM32H747I-EVAL/STCubeGenerated/CM7/Inc/"/>
+        <file category="source" name="../../../../Board/STM32H747I-EVAL/STCubeGenerated/CM7/Src/main.c" />
+        <file category="header" name="../../../../Board/STM32H747I-EVAL/STCubeGenerated/CM7/Inc/stm32h7xx_it.h"/>
+        <file category="source" name="../../../../Board/STM32H747I-EVAL/STCubeGenerated/CM7/Src/stm32h7xx_it.c"/>
+        <file category="other" name="../../../../Board/STM32H747I-EVAL/STCubeGenerated/STCubeGenerated.ioc"/>
       </project_files>
     </generator>
   </generators>
@@ -57,8 +57,8 @@
       </RTE_Components_h>
       <files>
         <file category="header" name="MX_Device.h"/>
-        <file category="header" name="../../../../Board/STM32H747I-EVAL/STM32CubeMX/STCubeGenerated/CM7/Inc/stm32h7xx_hal_conf.h"/>
-        <file category="source" name="../../../../Board/STM32H747I-EVAL/STM32CubeMX/STCubeGenerated/CM7/Src/stm32h7xx_hal_msp.c"/>
+        <file category="header" name="../../../../Board/STM32H747I-EVAL/STCubeGenerated/CM7/Inc/stm32h7xx_hal_conf.h"/>
+        <file category="source" name="../../../../Board/STM32H747I-EVAL/STCubeGenerated/CM7/Src/stm32h7xx_hal_msp.c"/>
       </files>
     </component>
   </components>

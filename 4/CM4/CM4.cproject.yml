@@ -3,7 +3,8 @@
 project:
 
   layers:
-    - layer: {Board}
+    # - layer: {Board}
+    - layer: ./Board/STM32H747I-EVAL/Board.clayer.yml
 
   groups:
     - group: Documentation
