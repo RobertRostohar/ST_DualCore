@@ -70,10 +70,7 @@ STM32CubeMX launcher issue:
 Launcher cannot handle filenames with multiple '.' (ex: CM4.Debug+CM4.cprj). 
 Therefore some files will be created in the drive root directory in subdirectory CM4 and CM7.
 
-Note: .cprj file is currently required by the launcher. 
-This implies that .cprj is generated before generator initial run. 
-However csolution already complains about reading the .gpdsc (does not exists). 
-Actually .gpdsc is not required by csouluton but by cbuild.
+Note: .cprj file is currently required by the launcher. Should be changed to .yml file.
 
 
 ## Step 1X (Subdirectory 1X): .yml based future project (proposal)
@@ -117,9 +114,6 @@ Generated .cprj files:
  - CM7/CM7.Release+CM7.cprj:
    - Target: Board STM32H747I-EVAL, Device STM32H747XIHx:CM7
    - Build: Release
-
-csolution issues:
- - packs without version get a fixed version
 
 Note: STM32CubeMX integration retained
 
@@ -193,8 +187,8 @@ Proposal:
 Layer description example in .pdsc:  
 ```
 <csolution>
-  <clayer type="Board" name="STM32H747I-EVAL" layer="./CM4/Board/STM32H747I-EVAL/Board.clayer.yml" directory="./_layer_/Board/STM32H747I-EVAL" condition="CM4"/>
-  <clayer type="Board" name="STM32H747I-EVAL" layer="./CM7/Board/STM32H747I-EVAL/Board.clayer.yml" directory="./_layer_/Board/STM32H747I-EVAL" condition="CM7"/>
+  <clayer type="Board" board="STM32H747I-EVAL" name="./CM4/Board/STM32H747I-EVAL/Board.clayer.yml" directory="./_layer_/Board/STM32H747I-EVAL" condition="CM4"/>
+  <clayer type="Board" board="STM32H747I-EVAL" name="./CM7/Board/STM32H747I-EVAL/Board.clayer.yml" directory="./_layer_/Board/STM32H747I-EVAL" condition="CM7"/>
 </csolution>
 ```
 
@@ -207,7 +201,7 @@ Note: `csolution convert` currently cannot be used to generated the desired dire
 
 Composed project from Step 3 (currently manually constructed):
  - find Board clayer from .pdsc (evaluate conditions)
- - create subdirectory <board_directory>=<layer_type>/<layer_name> in project directory
+ - create subdirectory <board_directory>=<layer_type>/<layer_board> in project directory
  - copy layer .yml file to <board_directory> subdirectory
  - copy RTE directory (from layer .yml directory) to project directory
  - process .yml file and copy referenced file (retain directory tree)

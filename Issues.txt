@@ -1,24 +1,10 @@
 CMSIS Project Manager:
  - "packs" can be specified on solution but not on project or layer
- - how to specify a linker script?
-   - as file with .sct extension: seems to work
-   - "linker" not supported by schema
- - how to specify?
-   - floating point type
-   - secure/non-secure
 
 Solution convert:
- - pack without version gets a fixed version
  - issues with .gpdsc when output directory is specified
    - gpdsc not copied
-   - files reference in gpdsc not copied
-
-Solution generator:
- - workflow:
-   - generate cprj -> component with generator
-     - error gpdsc cannot be read since it does not yet exists
-   - launch generator for context with cprj
- - STM32CubeMX launcher: cannot handle filename.Debug+CM4
+   - files referenced in gpdsc not copied
 
 uVision .cprj import:
  - linker file not shown in project view
