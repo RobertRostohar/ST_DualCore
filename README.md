@@ -208,4 +208,11 @@ Composed project from Step 3 (currently manually constructed):
 
 Note: STM32CubeMX integration retained (requires updated STM32H7 DFP)
 
+## Step 5 (Subdirectory 5): .cprj for project with layers (enhanced proposal)
+
+Derived from Step 4 (currently manually constructed):
+ - ftl generated files are moved to common STM32CubeMX directory (with adjusted path for files)
+ - common STM32CubeMX directory renamed to STM32CubeMX (from STCubeGenerated)
+
+Note: STM32CubeMX integration retained (requires updated STM32H7 DFP and STM32CubeMX launcher)
 
