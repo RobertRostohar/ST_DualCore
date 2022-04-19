@@ -29,7 +29,7 @@
       </exe>
       <project_files>
         <file category="include" name="Inc/"/>
-        <file category="source" name="main.c" />
+        <file category="source" name="Src/main.c" />
         <file category="header" name="Inc/stm32h7xx_it.h"/>
         <file category="source" name="Src/stm32h7xx_it.c"/>
         <file category="other" name="../STM32CubeMX.ioc"/>
