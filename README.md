@@ -194,6 +194,8 @@ Layer description example in .pdsc:
 
 Composed project should use similar directory structure as Step 2 and is described in Step 4.
 
+Note: `board` identifier in the above description is used for filtering. It would not be needed if filtering would be accomplished through conditions based on board name.
+
 Note: `csolution convert` currently cannot be used to generated the desired directory structure
 
 
